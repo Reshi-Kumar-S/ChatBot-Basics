@@ -1,0 +1,42 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Good morning",
+        "Hey there"
+      ],
+      "responses": [
+        "Hello! How can I help you?",
+        "Hi! Welcome to our college."
+      ]
+    },
+    {
+      "tag": "admission_query",
+      "patterns": [
+        "I need admission details",
+        "How to apply?",
+        "Admission process",
+        "College admission info"
+      ],
+      "responses": [
+        "Admissions are open from June to August.",
+        "You can apply online through our website."
+      ]
+    },
+    {
+      "tag": "fees_query",
+      "patterns": [
+        "What is the fees?",
+        "Course fee details",
+        "Tuition fees"
+      ],
+      "responses": [
+        "Fees start from ₹50,000 per year.",
+        "Please check the website for fee structure."
+      ]
+    }
+  ]
+}
