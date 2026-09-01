@@ -2,6 +2,8 @@
 
 responses = {
     "hi": "Hello! How can I help you?",
+    "menu" : "tecquila macca mocktail",
+    "tecquila" : "not avalible",
     "admission": "Admissions open from June to August.",
     "placement": "Our placement rate is 85%." 
 }
