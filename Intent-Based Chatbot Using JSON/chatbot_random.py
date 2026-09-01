@@ -1,38 +1,43 @@
 import json
+import random
 
 # Load JSON file
-with open("responses.json", "r") as file:
-    responses = json.load(file)
+with open("responses.json", "r", encoding="utf-8") as file:
+    data = json.load(file)
 
 
-# Chatbot function
 def chatbot(message):
 
+    # Convert user message to lowercase
     message = message.lower()
 
-    # Go through each intent
-    for intent, data in responses.items():
+    # Check every intent
+    for intent in data["intents"]:
 
-        # Check all keywords
-        for keyword in data["keywords"]:
+        # Check every pattern
+        for pattern in intent["patterns"]:
 
-            if keyword in message:
-                return data["response"]
+            if pattern.lower() in message:
 
-    # If nothing matches
-    return "Sorry, I didn't understand."
+                # Select a random response
+                response = random.choice(intent["responses"])
+
+                return response
+
+    # No matching intent
+    return "Sorry, I didn't understand your question."
 
 
 # Main chatbot loop
 while True:
 
-    message = input("You: ")
+    user_message = input("You: ")
 
-    # Exit chatbot
-    if message.lower() == "exit":
+    # Exit
+    if user_message.lower() == "exit":
         print("Bot: Goodbye!")
         break
 
-    response = chatbot(message)
+    response = chatbot(user_message)
 
     print("Bot:", response)

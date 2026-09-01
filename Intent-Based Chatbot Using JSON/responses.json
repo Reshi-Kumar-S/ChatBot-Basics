@@ -29,6 +29,8 @@
     {
       "tag": "fees_query",
       "patterns": [
+        "fee",
+        "fees",
         "What is the fees?",
         "Course fee details",
         "Tuition fees"
