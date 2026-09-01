@@ -4,7 +4,7 @@ import spacy
 
 # Load spaCy model
 nlp = spacy.load("en_core_web_sm")
-
+#python -m spacy download en_core_web_sm
 # Load intents
 with open("responses.json", "r", encoding="utf-8") as file:
     data = json.load(file)
